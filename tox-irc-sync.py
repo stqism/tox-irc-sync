@@ -110,9 +110,6 @@ class SyncBot(Tox):
                                 self.ensure_exe(self.group_message_send,
                                         (self.tox_group_id, msg))
 
-                            if content.startswith('^'):
-                                self.handle_command(content)
-
                         l = line.rstrip().split()
                         if l[0] == "PING":
                            self.irc_send("PONG %s\r\n" % l[1])
